@@ -7,21 +7,21 @@ function Home() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/get')
-      .then(result => setTodos(result.data))
-      .catch(err => console.log(err));
+    // axios.get('http://localhost:3001/get')
+    //   .then(result => setTodos(result.data))
+    //   .catch(err => console.log(err));
   }, []);
 
   const handleEdit = (id) => {
-    axios.put('http://localhost:3001/update/' + id)
-      .then(result => location.reload())
-      .catch(err => console.log(err));
+    // axios.put('http://localhost:3001/update/' + id)
+    //   .then(result => location.reload())
+    //   .catch(err => console.log(err));
   }
 
   const handleDelete = (id) => {
-    axios.delete('http://localhost:3001/delete/' + id)
-      .then(result => location.reload())
-      .catch(err => console.log(err));
+    // axios.delete('http://localhost:3001/delete/' + id)
+    //   .then(result => location.reload())
+    //   .catch(err => console.log(err));
   }
 
   return (

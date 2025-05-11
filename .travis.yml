@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t asif/docker-react -f Dockerfile.dev .
+
+scripts:
+  - docker run asif/docker-react npm run test -- --coverage
