@@ -1,0 +1,22 @@
+name: CI Pipeline
+on: [push] # Har push par trigger hoga
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Dependencies Install
+        run: npm install
+
+      - name: Run Tests (Optional)
+        run: npm test -- --watchAll=false
+
+      - name: Build Project
+        run: npm run build
