@@ -11,6 +11,7 @@ function Home() {
     //   .then(result => setTodos(result.data))
     //   .catch(err => console.log(err));
     console.log("Hello ALi")
+    console.log("DKJHJKDHJHD")
   }, []);
 
   const handleEdit = (id) => {
