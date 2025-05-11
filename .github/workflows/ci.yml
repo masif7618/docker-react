@@ -16,6 +16,10 @@ jobs:
       - name: Dependencies Install
         run: npm install
 
+      - name: Run Tests
+        run: npm run test -- --run
+        env:
+          CI: true
 
       - name: Build Project
         run: npm run build
