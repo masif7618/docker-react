@@ -10,6 +10,7 @@ function Home() {
     // axios.get('http://localhost:3001/get')
     //   .then(result => setTodos(result.data))
     //   .catch(err => console.log(err));
+    console.log("Hello ALi")
   }, []);
 
   const handleEdit = (id) => {
